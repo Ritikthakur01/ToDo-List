@@ -14,7 +14,7 @@ var todoList = (function () {
           "https://jsonplaceholder.typicode.com/todos"
         );
         const data = await response.json();
-        tasks = data.splice(2, 8);
+        tasks = data.splice(2, 19);
         renderList();
       } catch (error) {
         console.log(error);
