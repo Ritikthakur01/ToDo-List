@@ -1,0 +1,121 @@
+body{
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: grey;
+    display: grid;
+    place-items: center;
+}
+#card{
+    width:400px;
+    height:250px;
+    margin-top: 25vh;
+    border-radius: 10px;
+    background-color: aliceblue;
+    box-shadow: 0px 0px 9px 4px rgb(87, 86, 86);
+}
+
+#card #add{
+    width:90%;
+    height:45px;
+    border-radius: 10px;
+    border:hidden;
+    margin:10px 15px 15px 15px;
+    background-color: rgb(12, 12, 12);
+    font-size: larger;
+    color:whitesmoke;
+    text-align: center;
+}
+.double-tick{
+    margin-left: 20px;
+    /* cursor: pointer; */
+    opacity: .7;
+    transition: .3s all ease-in-out ;
+}
+.double-tick span{
+    margin-left: 5px;
+    font-size: small;
+}
+.double-tick:hover{
+    opacity: 1;
+}
+
+#list{
+    margin:0;
+    padding: 0 auto;
+    height:39%;
+    list-style-type: none;
+    position: relative;
+    left:-25px;
+    overflow: auto;
+    width: 95%;
+
+}
+#list::-webkit-scrollbar{
+    display: none;
+}
+
+li{
+    height:auto;
+    width: 370px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 40px;
+    margin: 10px 0px;
+    transition: .5s all ease-in-out ;
+}
+li label{
+    margin-left:8px;
+    font-size: large;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-weight: 400;
+    color:rgb(23, 20, 20) ;
+    transition: .3s all ease-in-out ;
+    
+}
+li:hover{
+    background-color: black;
+    color: white;
+    transform: scale(1.05);
+}
+li:hover label{
+    color: white;
+}
+li input{
+    position: relative;
+    margin-left: 10px;
+    
+}
+li .delete{
+    cursor: pointer;
+    opacity: 0;
+    transition: .3s all linear ;
+    position: relative;
+    right:6px;
+}
+li:hover .delete{
+    opacity: 1;
+    color: white;
+    
+}
+
+#list input:checked + label:before {
+    background: #989898;
+  } 
+#list input:checked + label {
+    text-decoration: line-through;
+  } 
+
+
+.footer{
+    margin-left: 20px;
+    opacity: .7;
+    font-size: small;
+}
+.footer #count{
+    font-weight: bold;
+    font-size: large;
+    margin-right: 5px;
+}
+
